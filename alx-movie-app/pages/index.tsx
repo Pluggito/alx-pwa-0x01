@@ -3,6 +3,12 @@ import { useRouter } from "next/router";
 const Home: React.FC = () => {
   const router = useRouter();
 
+
+  const handleNextpage = () => {
+    console.log("Sign in clicked!")
+    // TODO: navigate to auth page later
+  }
+
   return (
     <div className="bg-[#171D22] text-white">
       <section
@@ -36,7 +42,7 @@ const Home: React.FC = () => {
           Sign up today to get access to the latest movies, exclusive content,
           and personalized movie recommendations.
         </p>
-        <Button title="Get Started" />
+        <Button title="Get Started" action={handleNextpage} />
       </section>
     </div>
   );
